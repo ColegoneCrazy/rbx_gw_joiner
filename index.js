@@ -35,8 +35,8 @@ const joinGiveaway = id => new Promise(resolve => {
 })
 
 const getGiveaways = () => new Promise(resolve => {
-    consola.success('Fetching giveaways from rbxflip.com');
-    superagent('GET', 'https://api.rbxflip.com/giveaways')
+    consola.success('Fetching giveaways from rbxflip');
+    superagent('GET', 'https://legacy.rbxflip-apis.com/giveaways')
     .then(resp => {
         if (!resp.body || !resp.body.data || !resp.body.data.giveaways)
             return resolve([]);
